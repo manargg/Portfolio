@@ -10,16 +10,17 @@
     font-family: "Inter", sans-serif;
 }
 :root{
-    --main_color: #c9f31d;
-    --p_color: #8a8a8a;
-    --bg_color: #1f1f1f;
+    --main_color: #FF6666;
+    --p_color: #FF8989;
+    --bg_color: #fff;
     --white_color: #fff;
+    --beige-color: #FFEADD;
     --black_color: #070707;
     --border_color: rgba(255, 2555, 255, 0.1);
 }
 
 body{
-    background-color: #131313;
+    background-color: var(--white_color);
 }
 
 .container{
@@ -27,14 +28,61 @@ body{
     width: 80%;
     max-width: 1500px;
 }
+img{
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--black_color);
+    font-family: "DM Sans", sans-serif;
+}
+span{
+    color: var(--main_color);
+}
+p{
+    color: var(--p_color);
+}
+/*===========btns=========*/
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn{
+    background-color: var(--main_color);
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--black_color);
+    transition: 0.3;
+}
+.btn:hover{
+    scale: 1.05;
+}
+.btn-no-bg{
+    color: var(--black_color);
+    text-transform: capitalize;
+    transition: 0.3;
+    text-decoration: underline;
 
+}
+.btn-no-bg:hover{
+    color: var(--main_color);
+    scale: 1.05;
+}
 /*====================background lines==================*/
 .bg-lines span{
     position: fixed;
     top: 0;
     z-index: -1;
     height: 100%;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 102, 102, 0.2);
+    
     width: 1px;
     -webkit-animation: left-right 18s infinite;
     animation: left-right 18s infinite;
@@ -89,14 +137,21 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    padding-top: 20px;
+    height: 80px;
+    
+}
+header.active{
+    background: var(--beige-color);
+    border-bottom: 1px solid #FF8989;
+    transition: 0.6s;
+    z-index: 100;
 }
 
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 header nav .logo img{
     width: 30px;
@@ -106,13 +161,14 @@ header nav .links{
     gap: 40px;
 }
 header nav .links a{
-    color: var(--white_color);
+    color: var(--p_color);
     text-transform: capitalize;
     font-size: 18px;
     transition: 0.3s;
 }
 header nav .links a:hover{
     color: var(--main_color);
+    font-weight: 500;
 }
 
 header nav .icons{
@@ -127,3 +183,116 @@ header nav .icons a{
 header nav .icons a:hover{
     scale: 1.1;
  }
+ /*====================hero section==================*/
+ .hero{
+    padding-top: 100px;
+    margin-top: 100px;
+    
+ }
+ .hero .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .hero .text-container{
+    width: 50%;
+    
+ }
+ .hero .text-container h4{
+    color: var(--p_color);
+    font-size: 35px;
+    margin-bottom: 15px;
+
+ }
+
+ .hero .text-container h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+ }
+ .hero .img-container{
+    width: 40%;
+ }
+
+ .hero .btn{
+    font-size: 20px;
+    padding: 18px 50px;
+ }
+ /*====================top section attributes==================*/
+ .top-section{
+    text-align: center;
+    margin-bottom: 100px;
+    
+  }
+  .top-section h2{
+    font-size: 30px;
+  }
+
+  /*====================services section==================*/
+  .services{
+    margin-block: 150px 250px;
+  }
+  .services .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .services .box{
+    width: 30%;
+    text-align: center;
+    padding: 50px 20px;
+    border: 1px solid var(--p_color);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+  }
+  .services .boxes .box i{
+    color: var(--main_color);
+    font-size: 60px;
+    margin-bottom: 30px;
+    transition: 0.4s;
+  }
+  .services .boxes .box h3{
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .services .boxes .box p{
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .services .boxes .box:hover{
+   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3) ;
+  }
+  .services .boxes .box:hover i{
+    scale: 1.1;
+  }
+
+   /*====================projects section==================*/
+   .projects .project-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+   }
+   .projects .project-box img{
+    width: 45%;
+   }
+   .projects .project-box .text{
+    margin-left: 100px;
+    width: calc(50% - 100px);
+   }
+   .projects .project-box .text h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+   }
+   .projects .project-box .text h3 a{
+    color: var(--black_color);
+    font-size: 40px;
+    transition: 0.5s;
+   }
+   .projects .project-box .text h3 a:hover{
+    color: var(--main_color);
+   }
+   .projects .project-box .text p{
+    margin: 30px 0 50px;
+    line-height: 1.7;
+   }
