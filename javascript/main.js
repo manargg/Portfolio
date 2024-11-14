@@ -13,3 +13,18 @@ window.onscroll = function()
 
 }
 
+
+
+let nav_links = document.getElementById("links");
+
+function menu(){
+    nav_links.classList.toggle("active")
+
+}
+
+// Close the menu when a link inside it is clicked
+document.querySelectorAll("#links a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav_links.classList.remove("active");
+    });
+});

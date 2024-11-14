@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Manar</title>
     <link rel="icon" href="images/icons8-female-user-30.png">
 
@@ -28,9 +29,12 @@
     <!--the header section-->
    <header>
     <nav class="container">
-        <a href="" class="logo"><img src="/images/icons8-star-48.png" alt="img"></a>
+        <a href="" class="logo"><img src="/images/icons8-star-48.png" alt="img">Portfolio</a>
 
-        <div class="links">
+        <div class="links" id="links">
+            <span class="close-menu" onclick="menu()"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+            
+            <a href="#" class="logo"><img src="/images/icons8-star-48.png" alt="img">Portfolio</a>
             <a href="#" class="active">Home</a>
             <a href="#service">Services</a>
             <a href="#project">Projects</a>
@@ -38,19 +42,17 @@
         </div>
 
         <div class="icons">
-            <a href="https://github.com/manargg" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#contact" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <span class="icon-menu" onclick="menu()"><i class="fa-solid fa-bars"></i></span>
         </div>
     </nav>
    </header>
 
     <!--the hero section-->
-   <div class="hero">
+   <section class="hero">
         <div class="container">
             <div class="text-container">
                 <h4>Hello, I'm Manar </h4>
-                <h1><span>A Front-end Developer</span></h1>
+                <h1><span></span>A Web Designer</h1>
             
                 <div class="btns">
                     <a href="#contact" class="btn">Hire me</a>
@@ -62,13 +64,13 @@
                 <img src="./images/personal-photo.png" alt="" class="personal">
             </div>
         </div>
-   </div>
+   </section>
 
     <!--the services section-->
     <section class="services" id="service">
         <div class="container">
             <div class="top-section">
-                <h2>Our <span>services</span></h2>
+                <h2>My <span>Services</span></h2>
             </div>
 
             <div class="boxes">
@@ -180,7 +182,7 @@
     </section>
 
      <!--the contact section-->
-    <section class="contact" id="contact">
+    <section class="contact" id="Contact">
         <div class="top-section">
             <h2>Contact <span>Me</span></h2>
         </div>

@@ -150,6 +150,16 @@ header{
     height: 80px;
     
 }
+
+header .container .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: var(--main_color);
+}
+
+
 header.active{
     background: var(--beige-color);
     border-bottom: 1px solid #FF8989;
@@ -162,9 +172,13 @@ header nav{
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    
 }
 header nav .logo img{
-    width: 30px;
+    width: 40px;
+    margin-right: 5px;
+    
+   
 }
 header nav .links{
     display: flex;
@@ -173,7 +187,7 @@ header nav .links{
 header nav .links a{
     color: var(--p_color);
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.3s;
 }
 header nav .links a:hover{
@@ -181,18 +195,11 @@ header nav .links a:hover{
     font-weight: 500;
 }
 
-header nav .icons{
-    display: flex;
-    gap: 30px;
-}
-header nav .icons a{
+header nav .icons span{
    color: var(--main_color);
    font-size: 28px;
-   transition: 0.3s;
 }
-header nav .icons a:hover{
-    scale: 1.1;
- }
+
  /*=================================
              hero section
  ===================================*/
@@ -239,17 +246,17 @@ header nav .icons a:hover{
   }
 
   /*===================================
-                ervices section
+                services section
   ====================================*/
   .services{
-    margin-block: 150px 250px;
+    margin-block: 100px 150px;
   }
   .services .boxes{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .services .box{
+  .services .boxes .box{
     width: 30%;
     text-align: center;
     padding: 50px 20px;
@@ -335,7 +342,9 @@ header nav .icons a:hover{
       /*=================================
                  contact section
       ==================================*/
-
+    .contact {
+        margin-block: 100px 50px;
+      }
     .contact .container{
         display:flex;
         justify-content: space-between;
@@ -402,3 +411,252 @@ header nav .icons a:hover{
     .contact .btn:hover{
         scale: 1.04;
     }
+
+    /*================================================
+                 responsive section for the
+                        header section 
+      ================================================*/
+      .close-menu,
+      header .links .logo,
+      .icons .icon-menu
+      {
+        display: none;
+      }
+      header nav .icons{
+        display: block;
+    }
+      
+
+    /* for big screens */
+    @media (max-width:1315px) {
+        /* the header section */
+        .container{
+            width: 90%;
+        }
+
+
+    }
+
+    /* for medium screens */
+    @media (max-width:1000px) {
+        /* the header section */
+        header nav .links{
+            position: fixed;
+            top: 0;
+            left: -400px;
+            flex-direction: column;
+            width: 400px;
+            background-color: var(--beige-color);
+            padding: 80px 0;
+            text-align: center;
+            height: 100%;
+            border-right: 1px solid var(--main_color);
+            transition: 0.4s ease-in-out;
+        }
+        header nav .links.active{
+            left: 0;
+        }
+        .close-menu{
+            display: block;
+            font-size: 30px;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            
+          }
+          header .links .logo{
+            display: block;
+            display: flex;
+          }
+
+          .icons .icon-menu{
+            display: block;
+          }
+           /* the hero section */
+           .hero .text-container h4{
+            color: var(--p_color);
+            font-size: 25px;
+            margin-bottom: 15px;
+        
+         }
+         .hero .text-container h1{
+            font-size: 40px;
+            margin-bottom: 15px;
+         }
+         .hero .container{
+            flex-direction: column;
+            row-gap: 50px;
+         }
+         .hero .text-container{
+            width: 100%;
+            text-align: center;
+         }
+         .hero .btns{
+           justify-content: center;
+         }
+        /* the services section */
+         .services .boxes .box {
+            width:45%;
+            margin-bottom: 30px;
+
+         }
+         .projects .project-box .text h3 a{
+            font-size: 25px;
+           }
+           .projects .project-box .text h4{
+            font-size: 16px;
+           }
+           .projects .project-box .text p{
+            font-size: 14px;
+           }
+           .projects .project-box .text {
+                width: calc(50% - 50px);
+                margin-left: 50px;
+
+           }
+           /* the contact section */
+           .contact .container{
+            flex-direction: column;
+            justify-content: center;
+           }
+            .contact .social-contact{
+                width: 100%;
+                margin-bottom: 50px;
+                
+            }
+            .contact .social-contact .links{  
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .contact .social-contact .links a{
+                width:40%;
+                font-size: 16px;
+            }
+            .contact form{
+                width: 80%; 
+                margin: auto;  
+            }
+    }
+
+
+
+
+
+    /* for small screens */
+
+    @media (max-width:500px) {
+        header nav .links{
+            width: 100%;
+            left: -100%;
+        }
+
+
+        /* the hero section */
+     
+        
+        .hero .container{
+            flex-direction: column;
+            
+        }
+        .hero .text-container{
+            width: 100%;
+            text-align: center;
+        }
+        .hero .btn{
+            font-size: 15px;
+        }
+        .hero .img-container{
+            width: 70%;
+         }
+        
+
+         /* the services section */
+         .services .boxes{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            
+          }
+          .services .boxes .box{
+            width:100%;
+            text-align: center;
+            padding: 50px 20px;
+            border: 1px solid var(--p_color);
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+          }
+          .services .boxes .box i{
+            font-size: 40px;
+          }
+          .services .boxes .box h3{
+            font-size: 20px;
+          }
+          .services .boxes .box .btn{
+            font-size: 16px;
+          }
+
+
+        /*===============================
+            projects section
+        =================================*/
+        .projects .project-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            flex-direction: column;
+        }
+        .projects .project-box img{
+            width: 90%;
+        }
+        .projects .project-box .text{
+            margin-left: initial;
+           width: 80%;
+           margin-block: 50px 20px;
+           text-align: center;
+        }
+       
+        .projects .project-box.box-2{
+            flex-direction:column;
+        }
+
+        /* the contact section */
+        
+        .contact .container{
+            flex-direction: column;
+            justify-content: center;
+           }
+           .contact .top-section{
+            margin-bottom: 50px;
+        }
+        .contact .container .social-contact{
+            width: 100%;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .contact .social-contact .links{  
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+            
+        }
+        .contact .social-contact .links a{
+            width:100%;
+            font-size: 16px;
+        }
+
+
+        
+        .contact form{
+            width: 100%;
+            text-align: center;
+        }
+
+   
+        .contact form .input-form input{
+            width: 100%;
+            padding: 15px 20px;  
+            margin-bottom: 15px;
+        }
+}
