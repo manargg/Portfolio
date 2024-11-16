@@ -172,14 +172,13 @@ header nav{
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    
 }
+
 header nav .logo img{
     width: 40px;
     margin-right: 5px;
-    
-   
 }
+
 header nav .links{
     display: flex;
     gap: 40px;
